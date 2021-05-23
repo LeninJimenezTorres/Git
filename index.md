@@ -43,5 +43,30 @@ After you will enter in the directory and the before command, you will to add ma
     all in the current directory: `git add .`
 ```
 
+## TO COMMIT THE FILE TO THE COMMIT STORAGE / LOCAL REPO
+```markdown
+    git commit file1.sh
+```
+
+## TO SEE THE STATUS
+```markdown
+    git status
+```
+
+## TO IGNORE FILES OR DIRECTORIES
+To ignores files or directories you need to create the file: `.gitignore` and inside of this file you have to add the files or directories you want to ignore
+```markdown
+    .gitignore
+        file1.sh
+        directoryA/
+```
+
+
+## SSH ACCESS
+Firt you need to verify local ssh keys. To do this you need enter the command:
+```markdown
+    ls -al ~/.ssh
+```
+
 ### Support or Contact
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
