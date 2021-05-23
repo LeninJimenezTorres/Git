@@ -74,6 +74,13 @@ To ignores files or directories you need to create the file: `.gitignore` and in
 ```
 the command include a space before and after of the `--`
 
+## REMOTE ACCESS
+```markdown
+    command: git remote add origin  https://github.com/LeninJimenezTorres/Project/
+    command: git push -u origin master
+                                [____]
+                                   |______ The branch which you want to make the backup
+```
 
 ## SSH ACCESS
 Firt you need to verify local ssh keys. To do this you need enter the command:
