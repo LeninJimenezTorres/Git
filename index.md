@@ -39,13 +39,20 @@ To do this you need to be in the directory that you want to make the backup and 
 ## ACCESS TO ADD DOCUMENTS TO THE REPOSITORY
 After you will enter in the directory and the before command, you will to add manually the files that you want to make the backup. To do this you can add one by one or all at the same time
 ```markdown
-    one by one: `git add file1.sh`
-    all in the current directory: `git add .`
+    command: git add file1.sh
+    description: to add one by one file/directory
+    
+    command: git add .
+    description: all in the current directory
 ```
 
 ## TO COMMIT THE FILE TO THE COMMIT STORAGE / LOCAL REPO
 ```markdown
-    git commit file1.sh
+    command: git commit file1.sh
+    description: After of enter this command your code editor will be opened and you can add a comment or message.
+    
+    command git commit -m "This is the message of the new commit"
+    description: With this command your code editor will not open and the message will be added to the commit
 ```
 
 ## TO SEE THE STATUS
@@ -61,12 +68,40 @@ To ignores files or directories you need to create the file: `.gitignore` and in
         directoryA/
 ```
 
+## TO IGNORE CHANGES OF A FILE/DIRECTORY
+```markdown
+    git checkout -- [filename]
+```
+the command include a space before and after of the `--`
+
 
 ## SSH ACCESS
 Firt you need to verify local ssh keys. To do this you need enter the command:
 ```markdown
     ls -al ~/.ssh
 ```
+
+## TO SEE DIFFERENCES
+To see the differences between the current and the backup file you have to enter the command:
+```markdown
+    git diff file1.sh
+             [______]
+                 |______ file name and extention included
+```
+
+## MANAGE DIFFERENT VERSIONS
+You can modify and create different versions of a same directory.
+```markdown
+    command: git branch
+    description: to see all versions / masters
+    
+    command: git branch NewVersion
+    description: with this you can create a new version
+    
+    command: git checkout NewVersion
+    description: with this you can choose the version to work inside.
+```
+
 
 ### Support or Contact
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
