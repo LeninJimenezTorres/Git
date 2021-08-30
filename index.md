@@ -30,6 +30,29 @@
     git --version
 ```
 
+## GIT LOG
+To view the commits history 
+```markdown
+    git log
+```
+
+## GIT CHECKOUT
+To revet to the previous version of all the repository
+```markdown
+    git checkout -- .
+```
+To create a new branch
+```markdown
+    git checkout -b NewBranchName
+```
+
+## GIT AMEND
+To change the last commit description 
+```markdown
+    git commit --amend 
+```
+
+
 ## INITIALIZE A LOCAL REPOSITORY
 To do this you need to be in the directory that you want to make the backup and after enter the following command
 ```markdown
