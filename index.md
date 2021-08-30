@@ -45,6 +45,33 @@ To create a new branch
 ```markdown
     git checkout -b NewBranchName
 ```
+To change the branch branch
+```markdown
+    git checkout BranchName
+```
+To delete a branch branch
+```markdown
+    git checkout -d BranchName
+```
+
+## GIT BRANCH
+To see all existent branch
+```markdown
+    git branch
+```
+
+## GIT RENAME MAIN BRANCH
+To see all existent branch
+```markdown
+    git branch -M NewNameMainBranch
+```
+
+## GIT MERGE BRANCHES
+To merge two branches, inside the one you want to pull the info:
+```markdown
+    git merge BranchName
+```
+
 
 ## GIT AMEND
 To change the last commit description 
@@ -69,13 +96,17 @@ After you will enter in the directory and the before command, you will to add ma
     description: all in the current directory
 ```
 
-## TO COMMIT THE FILE TO THE COMMIT STORAGE / LOCAL REPO
+## TO 
+THE FILE TO THE COMMIT STORAGE / LOCAL REPO
 ```markdown
     command: git commit file1.sh
     description: After of enter this command your code editor will be opened and you can add a comment or message.
     
     command git commit -m "This is the message of the new commit"
     description: With this command your code editor will not open and the message will be added to the commit
+    
+    command gir commit -ma "Commit description"
+    description: This command simplify the [git add .] + [git commit -m 'commit description']
 ```
 
 ## TO SEE THE STATUS
@@ -102,8 +133,14 @@ the command include a space before and after of the `--`
     command: git remote add origin  https://github.com/LeninJimenezTorres/Project/
     command: git push -u origin master
                                 [____]
-                                   |______ The branch which you want to make the backup
+                                   |______ The branch inside which you want to make the backup
 ```
+
+## TO CHANGE THE REMOTE REPOSITORY
+```markdown
+    git remote set-url origin https://github.com/LeninJimenezTorres/Project/ 
+```
+
 
 ## SSH ACCESS
 Firt you need to verify local ssh keys. To do this you need enter the command:
