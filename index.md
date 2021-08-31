@@ -34,6 +34,9 @@
 To view the commits history 
 ```markdown
     git log
+    git log --oneline -> to show in one line abstract
+    git log -1 HEAD
+    
 ```
 
 ## GIT CHECKOUT
@@ -45,7 +48,7 @@ To create a new branch
 ```markdown
     git checkout -b NewBranchName
 ```
-To change the branch branch
+To change to other branch
 ```markdown
     git checkout BranchName
 ```
@@ -61,10 +64,26 @@ To see all existent branch
 ```
 
 ## GIT RENAME MAIN BRANCH
-To see all existent branch
+To change the main branch name
 ```markdown
     git branch -M NewNameMainBranch
 ```
+
+## GIT RENAME BRANCHES
+To change the branch name
+```markdown
+    git branch -m OldBranchName NewBranchName
+```
+
+
+## GIT CREATE AN ALIAS
+```markdown
+    git config --global  alias.co  checkout
+                              [_]  [______]
+                               |       |_______ The command to create the alias
+                               |_______________ The alias name
+```
+
 
 ## GIT MERGE BRANCHES
 To merge two branches, inside the one you want to pull the info:
@@ -105,7 +124,7 @@ THE FILE TO THE COMMIT STORAGE / LOCAL REPO
     command git commit -m "This is the message of the new commit"
     description: With this command your code editor will not open and the message will be added to the commit
     
-    command gir commit -ma "Commit description"
+    command gir commit -am "Commit description"
     description: This command simplify the [git add .] + [git commit -m 'commit description']
 ```
 
@@ -141,6 +160,10 @@ the command include a space before and after of the `--`
     git remote set-url origin https://github.com/LeninJimenezTorres/Project/ 
 ```
 
+## TO SEE THE REMOTE REPOSITORY
+```markdown
+    git remote -v 
+```
 
 ## SSH ACCESS
 Firt you need to verify local ssh keys. To do this you need enter the command:
@@ -169,6 +192,13 @@ You can modify and create different versions of a same directory.
     description: with this you can choose the version to work inside.
 ```
 
+# DEBUGGING
+Depuration
+Git has a couple of commands that are used to help debug a problem in your code. This ranges from figuring out where something was introduced to finding out who introduced it. 
 
+To find changes in a file locating the specific line.  
+```markdown
+    git blame filename.txt
+```
 ### Support or Contact
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
