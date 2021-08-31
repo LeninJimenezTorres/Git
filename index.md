@@ -47,6 +47,7 @@ To revet to the previous version of all the repository
 To create a new branch
 ```markdown
     git checkout -b NewBranchName
+    git branch NewBranchName
 ```
 To change to other branch
 ```markdown
@@ -147,12 +148,18 @@ To ignores files or directories you need to create the file: `.gitignore` and in
 ```
 the command include a space before and after of the `--`
 
+
 ## REMOTE ACCESS
 ```markdown
     command: git remote add origin  https://github.com/LeninJimenezTorres/Project/
     command: git push -u origin master
                                 [____]
                                    |______ The branch inside which you want to make the backup
+```
+
+## FORCE A PUSH
+```markdown
+    git push --force upstream new-feature -> This will push the latest commits and overwrite any conflicting commits onto the upstream remote repository. 
 ```
 
 ## TO CHANGE THE REMOTE REPOSITORY
@@ -183,14 +190,31 @@ To see the differences between the current and the backup file you have to enter
 You can modify and create different versions of a same directory.
 ```markdown
     command: git branch
-    description: to see all versions / masters
+    description: to see all branches or versions
     
     command: git branch NewVersion
-    description: with this you can create a new version
+    description: with this you can create a new branch to new code versions
     
     command: git checkout NewVersion
     description: with this you can choose the version to work inside.
 ```
+
+
+# TAGGING
+To display all tags
+```markdown
+    git tag
+```
+To display a determinated tag
+```markdown
+    git tag -l 'tagname'
+    git show tagname
+```
+To create a tag
+```markdown
+    git tag -a 'tagname' -m 'tag description'
+```
+
 
 # DEBUGGING
 Depuration
@@ -199,6 +223,9 @@ Git has a couple of commands that are used to help debug a problem in your code.
 To find changes in a file locating the specific line.  
 ```markdown
     git blame filename.txt
+    git blame -L 1,10 README.md  -> It lets you inspect the first 10 lines of the README.md file to see when each line was last modified and who the author of the modifications was. 
 ```
+
+
 ### Support or Contact
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
